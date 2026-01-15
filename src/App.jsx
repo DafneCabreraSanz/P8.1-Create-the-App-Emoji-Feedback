@@ -14,17 +14,21 @@ const emojis = [
 ];
 
 function App() {
+  // State to track the currently selected emoji (null when no emoji is selected)
   const [selected, setSelected] = useState(null);
 
   return (
     <div className="app">
       <h1>How do you feel?</h1>
+    
       <FeedbackList
         emojis={emojis}
         selected={selected}
         onSelect={setSelected}
       />
+      {/* Component that shows the currently selected emoji and label */}
       <SelectedFeedbackDisplay selected={selected} />
+      {/* Reset button to clear the selection */}
       <button onClick={() => setSelected(null)} className="reset-button">
         Reset
       </button>

@@ -1,7 +1,7 @@
 import FeedbackItem from "../FeedbackItem/FeedbackItem";
 
 // Component that renders a list of emoji feedback buttons
-function FeedbackList({ emojis, selected, onSelect }) {
+function FeedbackList({ emojis, selected, onSelectedFeedback }) {
   return (
     <div className="feedback-list">
       {/* Loop through all emojis and create a button for each one */}
@@ -12,7 +12,7 @@ function FeedbackList({ emojis, selected, onSelect }) {
           // Check if this emoji is the currently selected one
           isSelected={selected?.emoji === emoji.emoji}
           // Call onSelect when the user clicks this emoji button
-          onClick={() => onSelect(emoji)}
+          onSelectedFeedback={() => onSelectedFeedback(emoji)}
         />
       ))}
     </div>

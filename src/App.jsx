@@ -24,7 +24,7 @@ function App() {
       <FeedbackList
         emojis={emojis}
         selected={selected}
-        onSelect={setSelected}
+        onSelectedFeedback={setSelected}
       />
       {/* Component that shows the currently selected emoji and label */}
       <SelectedFeedbackDisplay selected={selected} />

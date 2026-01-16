@@ -1,5 +1,5 @@
 // Component that displays a single emoji button
-function FeedbackItem({ emoji, isSelected, onClick }) {
+function FeedbackItem({ emoji, isSelected, onSelectedFeedback }) {
   // Apply the selected class if this emoji is currently selected
   let buttonClass = "feedback-item";
   if (isSelected === true) {
@@ -7,7 +7,7 @@ function FeedbackItem({ emoji, isSelected, onClick }) {
   }
 
   return (
-    <button className={buttonClass} onClick={onClick}>
+    <button className={buttonClass} onClick={onSelectedFeedback}>
       {emoji.emoji}
     </button>
   );
